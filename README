@@ -1,0 +1,19 @@
+Insert
+The insert method should set the value of the next free element to its parameter:
+- The method sets the appropriate element of the array and increments currentSize; making currentSize private ensures that its value is always consistent with the state of the object. If it was public it could be directly accessed by a programmer and given an inappropriate value
+- The method ensures that values are not inserted when the array is full.
+
+Set
+The set method sets the value of an element whose index is passed to the method:
+-This method changes an existing value, so does nothing if the index is invalid.
+
+Get
+The get method returns the value at a given index:
+- This function does not modify any member variables, so it is declared const.
+- In the previous methods the approach to dealing with incorrect input was to do nothing when a method is given an index that is invalid (when it would fall outside the array, or because it does not refer to an existing element); this approach does not work for the get method since the method must return a value.
+- The approach taken in this example is to return zero; it is important to understand that this is not a satisfactory solution to the problem since an existing array element could contain the value zero.
+- This issue is discussed briefly under Error Handling.
+
+Capacity and size
+These functions return the size of the underlying array and the number of items currently stored in that array.
+- Note that since neither function modifies the member values of the class, they are both declared const.
